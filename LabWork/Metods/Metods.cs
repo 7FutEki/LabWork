@@ -13,14 +13,7 @@ namespace LabWork.Metods
 { 
     public class Metods
     {
-        public static List<Product> GetAllProduct()
-        {
-            using (ApplicationContext db = new ApplicationContext())
-            {
-                var result = db.Products.ToList();
-                return result;
-            }
-        }
+        
 
 
         public static string AddProduct(Guid Id, string name, double price, string options)

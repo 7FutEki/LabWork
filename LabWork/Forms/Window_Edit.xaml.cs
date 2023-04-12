@@ -1,7 +1,6 @@
 ﻿using LabWork.Models;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,32 +16,27 @@ using System.Windows.Shapes;
 namespace LabWork.Forms
 {
     /// <summary>
-    /// Логика взаимодействия для Window_Add.xaml
+    /// Логика взаимодействия для Window_Edit.xaml
     /// </summary>
-    public partial class Window_Add : Window
+    public partial class Window_Edit : Window
     {
         public Product Product { get; set; }
-        public Window_Add()
+
+        public Window_Edit(Product product)
         {
             InitializeComponent();
-            Product = new Product();
+            Product = product;
             DataContext = Product;
-            Product.Id = Guid.NewGuid();
         }
-        
+
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
-            
+            DialogResult = true;
             Metods.Metods.AddProduct(Product.Id, Product.Name, Product.Price, Product.Options);
             MainWindow mainWindow = new MainWindow();
             Close();
             mainWindow.ShowDialog();
         }
-
-
-        
-
-
 
         private void btn_madeQr_Click(object sender, RoutedEventArgs e)
         {

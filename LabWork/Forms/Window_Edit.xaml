@@ -1,0 +1,45 @@
+﻿<Window x:Class="LabWork.Forms.Window_Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabWork.Forms"
+        mc:Ignorable="d"
+        Title="Window_Edit" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="205"/>
+            <ColumnDefinition Width="205"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="Имя товара" TextAlignment="Center" FontSize="15" Height="20" />
+        <TextBox x:Name="tb_name" Grid.Row="0" Grid.Column="4" Text="{Binding Name}" Width="200" Height="50"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Цена товара" TextAlignment="Center" FontSize="15" Height="20" />
+        <TextBox x:Name="tb_price" Grid.Row="1" Grid.Column="4" Text="{Binding Price}" Width="200" Height="50" />
+
+        <TextBlock Grid.Row="2" Grid.Column="3"  Text="Описание товара" TextAlignment="Center" FontSize="15" Height="20" />
+        <TextBox x:Name="tb_opt" Grid.Row="2" Grid.Column="4"  Text="{Binding Options}" Width="200" Height="50" />
+
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="Уникальный идентификатор" TextAlignment="Center" FontSize="15" Height="20" />
+        <TextBox Grid.Row="3" x:Name="tb_id"  Grid.Column="4" Text="{Binding Id}" Width="200" Height="50" />
+
+        <Button Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" x:Name="btn_add" Content="Добавить" Click="btn_add_Click"  Margin="10"/>
+        <Button Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" x:Name="btn_madeQr" Content="Сгенерировать QR-Code" Click="btn_madeQr_Click"  Margin="10"/>
+
+        <Image Source="{Binding QrCode}" x:Name="qr_im" Grid.Column="1" Grid.Row="2" />
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="QR-Code" TextAlignment="Center" FontSize="15" Height="20"/>
+    </Grid>
+</Window>
