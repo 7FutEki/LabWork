@@ -24,6 +24,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
+        <Button Grid.Row="0" Grid.Column="0" Background="White" Content="←" Height="54" Width="111" Margin="0,0,0,0" VerticalAlignment="Top" x:Name="btn_exit" Click="btn_exit_Click" />
+
         <TextBlock Grid.Row="0" Grid.Column="3" Text="Имя товара" TextAlignment="Center" FontSize="15" Height="20" />
         <TextBox x:Name="tb_name" Grid.Row="0" Grid.Column="4" Text="{Binding Name}" Width="200" Height="50"/>
 
@@ -36,9 +38,9 @@
         <TextBlock Grid.Row="3" Grid.Column="3" Text="Уникальный идентификатор" TextAlignment="Center" FontSize="15" Height="20" />
         <TextBox Grid.Row="3" x:Name="tb_id"  Grid.Column="4" Text="{Binding Id}" Width="200" Height="50" />
 
-        <Button Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" x:Name="btn_add" Content="Добавить" Click="btn_add_Click"  Margin="10"/>
+        <Button  Grid.Row="4" Grid.Column="3" HorizontalAlignment="Center" x:Name="btn_add" Content="Добавить" Click="btn_add_Click"  Margin="10"/>
         <Button Grid.Row="4" Grid.Column="4" HorizontalAlignment="Center" x:Name="btn_madeQr" Content="Сгенерировать QR-Code" Click="btn_madeQr_Click"  Margin="10"/>
-        
+
         <Image Source="{Binding QrCode}" x:Name="qr_im" Grid.Column="1" Grid.Row="2" />
         <TextBlock Grid.Row="3" Grid.Column="1" Text="QR-Code" TextAlignment="Center" FontSize="15" Height="20"/>
     </Grid>

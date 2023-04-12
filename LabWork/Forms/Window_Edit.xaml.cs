@@ -32,10 +32,7 @@ namespace LabWork.Forms
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
-            Metods.Metods.AddProduct(Product.Id, Product.Name, Product.Price, Product.Options);
-            MainWindow mainWindow = new MainWindow();
             Close();
-            mainWindow.ShowDialog();
         }
 
         private void btn_madeQr_Click(object sender, RoutedEventArgs e)

@@ -48,5 +48,13 @@ namespace LabWork.Forms
         {
 
         }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindow = new MainWindow();
+            Close();
+            mainwindow.ShowDialog();
+
+        }
     }
 }
