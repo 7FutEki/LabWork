@@ -10,26 +10,26 @@
         Title="Список товаров" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <ScrollViewer>
+        <ScrollViewer >
             <ListBox Grid.Row="0" ItemsSource="{Binding TapProduct}" SelectedItem="{Binding Product}" x:Name="tapProduct">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="Уникальный идентификатор"/>
-                            <TextBlock Text="{Binding Path=Id}"/>
+                            <TextBlock Text="{Binding Path=Id}" TextWrapping="Wrap"/>
                             <TextBlock Text="Название товара"/>
                             <TextBlock Text="{Binding Path=Name}"/>
                             <TextBlock Text="Цена товара"/>
                             <TextBlock Text="{Binding Path=Price}"/>
                             <TextBlock Text="Описание товара"/>
                             <TextBlock Text="{Binding Path=Options}"/>
-                            <TextBlock Text="QrCode"/>
-                            <Image Source="{Binding Path=QrCode}" Width="100" Height="100"/>
+                            <TextBlock  Text="QrCode"/>
+                            <Image  x:Name="qr" Source="{Binding Path=QrCode}" Width="100" Height="100"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

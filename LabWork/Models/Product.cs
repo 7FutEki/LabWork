@@ -17,6 +17,7 @@ namespace LabWork.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public string Options { get; set; }
-        [NotMapped] BitmapImage QrCode { get; set; }
+        [NotMapped]
+        public BitmapImage QrCode { get; set; }
     }
 }
