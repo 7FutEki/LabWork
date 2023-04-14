@@ -37,41 +37,5 @@ namespace LabWork.Metods
                 return result;
             }
         }
-
-
-
-
-        #region Мусор
-        //public static string DeleteProduct(Product product)
-        //{
-        //    string result = "Такого товара не существует";
-        //    using( ApplicationContext db = new ApplicationContext())
-        //    {
-        //        db.Products.Remove(product);
-        //        db.SaveChanges();
-        //        result = "Сделано! Товар " + product.Name + "удален";
-        //    }
-        //    return result;
-        //}
-        //public static string EditProduct (Product oldproduct, Guid newid, string newname, double newprice, string newoptions)
-        //{
-        //    string result = "Такого товара не существует";
-        //    using(ApplicationContext db = new ApplicationContext())
-        //    {
-        //        Product product = db.Products.FirstOrDefault(p => p.Id == oldproduct.Id);
-        //        if (product != null)
-        //        {
-        //            product.Id = newid;
-        //            product.Name = newname;
-        //            product.Price = newprice;
-        //            product.Options = newoptions;
-        //            db.SaveChanges();
-
-        //            result = "Сделано! Товар " + product.Name + "изменен";
-        //        }
-        //        return result;
-        //    }
-        //}
-        #endregion
     }
 }

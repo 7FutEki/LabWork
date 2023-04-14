@@ -38,17 +38,6 @@ namespace LabWork.Forms
             Close();
             mainWindow.ShowDialog();
         }
-
-
-        
-
-
-
-        private void btn_madeQr_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainwindow = new MainWindow();

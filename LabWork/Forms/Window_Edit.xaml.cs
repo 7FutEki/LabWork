@@ -34,10 +34,5 @@ namespace LabWork.Forms
             DialogResult = true;
             Close();
         }
-
-        private void btn_madeQr_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
